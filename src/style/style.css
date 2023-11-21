@@ -8,6 +8,7 @@
 
   --white: #FFF;
   --black: #000;
+  --green: #008000;
 }
 
 * {
@@ -21,6 +22,10 @@ ol {
   list-style: none;
 }
 
+textarea {
+  resize: none;
+}
+
 body {
   background: var(--background);
   font-family: var(--ff);
@@ -30,8 +35,233 @@ main {
   display: block;
 }
 
+img {
+  width: -webkit-fill-available;
+}
+
 .container {
   max-width: 90rem;
   margin: 0 auto;
   padding: 0 1.25rem;
+}
+
+
+.main-image {
+  max-width: 44.96rem;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5.81rem;
+}
+
+.main-content__title {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+  line-height: normal;
+  color: var(--text-pink);
+}
+
+.main-content__description {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-blue);
+}
+
+.main-content img {
+  width: initial;
+  margin-top: 2.19rem;
+}
+
+section.blue {
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem;
+  padding: 3.31rem 0 3.49rem 0;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 1.24156rem;
+  box-shadow: 0px 3.31077px 13.24308px 0px rgba(0, 0, 0, 0.25);
+  padding: 1.66rem;
+}
+
+.card img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+.card h2 {
+  color: var(--text-pink);
+  font-size: 1.82619rem;
+  font-weight: 900;
+  margin-bottom: 1.24rem;
+}
+
+.card p {
+  color: var(--text-blue);
+  font-size: 1.00263rem;
+  font-weight: 600;
+}
+
+.contact {
+  margin: 4.88rem 0 4.06rem 0;
+}
+
+.contact h2 {
+  color: var(--text-pink);
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2.69rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form__submit {
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+  color: var(--white);
+  width: fit-content;
+}
+
+.contact-form__submit:hover,
+.contact-form__submit:active,
+.contact-form__submit:focus-visible {
+  border: none !important;
+  cursor: pointer;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: var(--background);
+  border-radius: 1rem;
+  border: 1.5px solid var(--text-blue);
+  font-family: var(--ff);
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.contact-form input:hover,
+.contact-form input:active,
+.contact-form input:focus-visible,
+.contact-form textarea:hover,
+.contact-form textarea:active,
+.contact-form textarea:focus-visible  {
+  border: 1.5px solid var(--text-pink);
+  cursor: pointer;
+  outline: none;
+}
+
+.contact-form input[name='name'],
+.contact-form input[name='email'] {
+  padding: 1rem 1rem 1rem 3.13rem;
+}
+
+.contact-form input[name='name'] {
+  background-image: url('../img/person.svg');
+  background-repeat: no-repeat;
+  background-position: 0.88rem 50%;
+  background-size: 1.5rem;
+}
+
+.contact-form input[name='email'] {
+  background-image: url('../img/at.svg');
+  background-repeat: no-repeat;
+  background-position: 0.88rem 50%;
+  background-size: 1.5rem;
+}
+
+
+.contact-form textarea[name='message'] {
+  height: 7.875rem;
+  padding: 0.75rem 1rem 1rem 1rem;
+}
+
+footer {
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+  padding: 1rem 0;
+}
+
+footer a[rel="license"]{
+  color: var(--white);
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+footer a[rel="license"]:hover {
+  text-decoration: underline;
+}
+
+
+@media (min-width: 999px) {
+  .main-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-bottom: 6.8rem;
+  }
+
+  .main-content {
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  .main-content img {
+    margin-top: 11.19rem;
+  }
+
+  .main-image {
+    max-width: 55%;
+  }
+
+  .main-content__title {
+    font-size: 2.9rem;
+    text-align: start;
+    width: 100%;
+  }
+
+  .main-content__description {
+    font-size: 1.7rem;
+    text-align: start;
+    width: 100%;
+  }
+
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .card {
+    max-width: 22.875rem;
+  }
+
+  .section-contact {
+    background-image: url('../img/stars.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 4.88rem 0 4.06rem 0;
+  }
+
+  .contact {
+    margin: 0;
+    width: 50%;
+  }
 }
